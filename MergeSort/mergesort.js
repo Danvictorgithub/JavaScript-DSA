@@ -1,4 +1,4 @@
-function insertionSort(array){
+function selectionSort(array){
 	let sortedarray = [];
 	let length = array.length;
 	for (let i = 0; i < length;i++) {
@@ -19,13 +19,13 @@ function mergesort(array) {
 		console.log("right",rightarray);
 		if (leftarray > rightarray) {
 			console.log("compare","left",leftarray,"right",rightarray);	
-			array = insertionSort(rightarray.concat(leftarray));
+			array = selectionSort(rightarray.concat(leftarray));
 
 			console.log("return",array,"\n");
 			return array;
 		} else {
 			console.log("compare","left",leftarray,"right",rightarray);
-			array = insertionSort(leftarray.concat(rightarray));
+			array = selectionSort(leftarray.concat(rightarray));
 			console.log("return",array,"\n");
 			return array;
 		}
